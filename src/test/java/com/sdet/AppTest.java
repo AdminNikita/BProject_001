@@ -8,7 +8,7 @@ import com.sdev.App;
 
 public class AppTest {
 	
-	@Test(enabled = false)
+	@Test
 	public void testlogin1()
 	{
 		App myapp =new App();
@@ -20,6 +20,13 @@ public class AppTest {
 	{
 		App myapp =new App();
 		Assert.assertEquals(1, myapp.userLogin("abc", "abc1"));
+	}
+	
+	@Test
+	public void testlogin3()
+	{
+		App myapp =new App();
+		Assert.assertEquals(0, myapp.userLogin("abc123", "abc1"));
 	}
 
 }
